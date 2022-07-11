@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  java:
+    build: .
+    environment:
+      - CODFLIX_DB_HOST=db:3306
+      - CODFLIX_DB_NAME=codflix
+      - CODFLIX_DB_USER=codflix
+      - CODFLIX_DB_PASSWORD=codflix
+    depends_on:
+      - db
+    ports:
+      - '8080:8080'

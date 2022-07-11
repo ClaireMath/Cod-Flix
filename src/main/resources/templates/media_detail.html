@@ -1,0 +1,23 @@
+#parse("dashboard.html")
+#@mainLayout()
+
+<h1>$media.getType() details</h1>
+
+<div class="card">
+
+    <iframe class="card-img-top" allowfullscreen
+            src="$media.getTrailerUrl()"></iframe>
+
+    <div class="card-body h-75 d-inline-block">
+        <h3 class="card-title">$media.getTitle()</h3>
+        <h5>Release date : $media.getReleaseDate()</h5>
+
+        <p class="card-text">$media.getSummary()</p>
+        #if ( $media.type=='series' )
+
+        <a href="${media.getTrailerUrl()}" class="btn btn-danger">Watch it now fullscreen</a>
+        #end
+    </div>
+</div>
+
+#end

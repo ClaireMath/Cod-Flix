@@ -1,0 +1,14 @@
+/**********
+* Footer style
+**********/
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+
+    background: dimgray;
+
+    padding: 15px 25px;
+}
